@@ -1,0 +1,48 @@
+.sidebar-container {
+  display: flex;
+}
+
+.color-box {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 150px 5px 5px 5px;
+  cursor: pointer;
+}
+
+.color-box.selected {
+  border: 3px solid #FFD700;
+}
+
+.Seta{
+  width: 220px;
+  height: 220px;
+}
+
+.qr_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.Logo{
+  width: 220px;
+  height: 220px;
+  margin: 30px;
+}
+
+.qr-code-container {
+  border: 8px solid #000;
+  padding: 12px;
+}
+
+.download-button {
+  margin-bottom: 40px;
+  margin-top: 20px;
+}

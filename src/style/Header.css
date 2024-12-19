@@ -1,0 +1,16 @@
+.header {
+  background-color: #ff6100;
+  text-align: center;
+  height: 70px;
+}
+
+.header-container {
+  display: flex;
+  height: 100%;
+  margin: 17px 140px;
+}
+
+.header-img {
+  height: 45px;
+  max-width: 100%;
+}
