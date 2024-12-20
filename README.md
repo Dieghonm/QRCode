@@ -51,6 +51,9 @@ Antes de começar, você precisa ter instalado:
 
 5. Abra seu navegador e acesse [http://localhost:3000](http://localhost:3000) para visualizar o aplicativo.
 
+6. Pages
+   O projeto tambem esta disponivel no link - https://dieghonm.github.io/QRCode/
+
 ## Como Usar
 
 1. **Gerar QR Code de URL ou Texto**:
