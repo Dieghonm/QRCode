@@ -25,10 +25,7 @@
 .qr_box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  padding: 20px;
 }
 
 img {
@@ -50,12 +47,13 @@ img {
 }
 
 .download-button {
-  width: 230px;
+  width: 260px;
   margin: 20px 0 40px;
   padding: 10px 20px;
   text-align: center;
   border-radius: 8px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 /* Breakpoints para diferentes dispositivos */

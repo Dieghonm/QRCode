@@ -33,27 +33,30 @@ function Input({ onTextChange }) {
 
   return (
     <div className="inputs-box">
-      <div className="button-container">
-        <img
-          src={WWWW_ICON}
-          alt="URL icon"
-          className={`input-icon ${activeInput === "url" ? "active" : ""}`}
-          onClick={() => setActiveInput("url")}
-        />
-        <img
-          src={Text_ICON}
-          alt="Text icon"
-          className={`input-icon ${activeInput === "text" ? "active" : ""}`}
-          onClick={() => setActiveInput("text")}
-        />
-        <img
-          src={WIFI_ICON}
-          alt="WiFi icon"
-          className={`input-icon ${activeInput === "wifi" ? "active" : ""}`}
-          onClick={() => setActiveInput("wifi")}
-        />
+      <div className="icons-box">
+          <div className="button-container">
+            <img
+              src={WWWW_ICON}
+              alt="URL icon"
+              className={`input-icon ${activeInput === "url" ? "active" : ""}`}
+              onClick={() => setActiveInput("url")}
+            />
+            <img
+              src={Text_ICON}
+              alt="Text icon"
+              className={`input-icon ${activeInput === "text" ? "active" : ""}`}
+              onClick={() => setActiveInput("text")}
+            />
+            <img
+              src={WIFI_ICON}
+              alt="WiFi icon"
+              className={`input-icon ${activeInput === "wifi" ? "active" : ""}`}
+              onClick={() => setActiveInput("wifi")}
+            />
+          </div>
         <img src={image1} alt="Logo"  className="Logo-icon"/>
       </div>
+      
 
       {/* Input para URL */}
       {activeInput === "url" && (
