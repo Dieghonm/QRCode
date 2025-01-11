@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/QRCode/static/css/main.b62de20d.css",
-    "main.js": "/QRCode/static/js/main.477555c1.js",
+    "main.css": "/QRCode/static/css/main.1a191fee.css",
+    "main.js": "/QRCode/static/js/main.dd746b01.js",
     "static/media/image1.png": "/QRCode/static/media/image1.2b37853d7261e04d9d58.png",
-    "static/media/AllSite.svg": "/QRCode/static/media/AllSite.640f3fe3a7434df0b6ba997735df208a.svg",
-    "static/media/image2.png": "/QRCode/static/media/image2.838e591db1982c27e270.png",
+    "static/media/WIFI_ICON.png": "/QRCode/static/media/WIFI_ICON.9c973f04072314fa9e65.png",
     "index.html": "/QRCode/index.html",
-    "main.b62de20d.css.map": "/QRCode/static/css/main.b62de20d.css.map",
-    "main.477555c1.js.map": "/QRCode/static/js/main.477555c1.js.map"
+    "main.1a191fee.css.map": "/QRCode/static/css/main.1a191fee.css.map",
+    "main.dd746b01.js.map": "/QRCode/static/js/main.dd746b01.js.map"
   },
   "entrypoints": [
-    "static/css/main.b62de20d.css",
-    "static/js/main.477555c1.js"
+    "static/css/main.1a191fee.css",
+    "static/js/main.dd746b01.js"
   ]
 }
