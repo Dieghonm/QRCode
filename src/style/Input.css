@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 30px 120px 30px 100px;
 }
 
@@ -66,13 +66,17 @@
   font-family: CascadiaCodeRoman-Bold, 'Cascadia Code';
   font-variation-settings: 'wght' 700;
   font-weight: 700;
-  margin: 10px 0;
+  margin: 10px 20px;
   color: #7f7f7f;
   font-size: 20px;
 }
 
 .custom-label span {
   color: rgb(24, 189, 24);
+}
+
+.text-counter{
+  margin-left: 20px;
 }
 
 @media (max-width: 1024px) {
@@ -138,6 +142,7 @@
 @media (max-width: 735px) {
   .inputs-box {
     width: 380px;
+    margin: 0 auto;
     padding: 0px 10px 0;
   }
 
