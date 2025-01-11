@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/QRCode/static/css/main.e58b41a0.css",
+    "main.css": "/QRCode/static/css/main.115f0954.css",
     "main.js": "/QRCode/static/js/main.f27197d3.js",
     "static/media/image1.png": "/QRCode/static/media/image1.2b37853d7261e04d9d58.png",
     "static/media/WIFI_ICON.png": "/QRCode/static/media/WIFI_ICON.9c973f04072314fa9e65.png",
     "index.html": "/QRCode/index.html",
-    "main.e58b41a0.css.map": "/QRCode/static/css/main.e58b41a0.css.map",
+    "main.115f0954.css.map": "/QRCode/static/css/main.115f0954.css.map",
     "main.f27197d3.js.map": "/QRCode/static/js/main.f27197d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.e58b41a0.css",
+    "static/css/main.115f0954.css",
     "static/js/main.f27197d3.js"
   ]
 }
