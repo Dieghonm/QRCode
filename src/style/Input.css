@@ -1,7 +1,13 @@
 .inputs-box {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 30px 60px 30px 100px;
+}
+
+.Logo-icon{
+  width: 0px;
+  height: 0px;
+  margin: 0px;
 }
 
 .input-card {
@@ -11,22 +17,17 @@
   margin-bottom: 20px;
 }
 
-.input-icon {
-  width: 60px;
-  height: 60px;
-  margin: 20px;
-}
-
-.input-icon-text {
-  width: 60px;
-  height: 40px;
-  margin: 20px;
+.input-icon, .WIFI_ICON, .input-icon-text {
+  width: 70px;
+  height: 70px;
+  margin: 10px 0px 10px 60px;
 }
 
 .input-text {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  gap: 15px;
 }
 
 .input-url-box,
@@ -70,11 +71,10 @@
   color: rgb(24, 189, 24);
 }
 
-/* Breakpoints para diferentes dispositivos */
-
 @media (max-width: 1024px) {
   .inputs-box {
-    padding: 15px;
+    padding: 20px 40px 20px 60px;
+    width: 510px;
   }
 
   .input-card {
@@ -82,6 +82,12 @@
     gap: 15px;
   }
 
+  .input-icon, .WIFI_ICON, .input-icon-text {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0px 10px 40px;
+  }
+
   .input-url-box,
   .input-text-box {
     width: 100%;
@@ -92,14 +98,15 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .inputs-box {
     padding: 10px;
   }
 
   .input-card {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    align-items: stretch;
   }
 
   .input-url-box,
@@ -109,30 +116,67 @@
 
   .generate-button {
     width: 100%;
+    height: 35px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 735px) {
+  .inputs-box {
+    width: 380px;
+    padding: 0px 10px 0;
+    /* gap: 5px; */
+  }
+
   .input-card {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
 
-  .input-url-box,
-  .input-text-box {
-    width: 100%;
+  .input-icon, .WIFI_ICON, .input-icon-text {
+    width: 40px;
+    height: 40px;
+    margin: 1px 15px 1px 15px;
   }
 
+  .input-url-box {
+    width: 360px;
+    /* height: 200px; */
+    padding: 10px;
+  }
+
+  .input-text-box{
+    width: 360px;
+    height: 180px;
+    padding: 10px;
+  }
+  .input-text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 5px;
+  }
   .generate-button {
     width: 100%;
+    height: 30px;
+    margin-top: 0px;
   }
 
-  .input-icon {
+  .custom-label {
+    margin: 0px 20px;
+  }
+
+  .text-counter{
+    font-size: 10px;
+  }
+
+  .Logo-icon{
     width: 50px;
     height: 50px;
+    margin-left: 100px;
   }
+  
+}
 
-  .generate-button {
-    width: 200px;
-  }
+@media (max-width: 400px) {
+  
 }

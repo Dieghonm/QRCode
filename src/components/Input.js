@@ -1,16 +1,19 @@
 import React, { useState } from "react";
+import image1 from "../svg/image1.png";
 import image4 from "../svg/image4.png";
-import image5 from "../svg/image5.png";
-import image6 from "../svg/image6.png";
-// import { QRCodeSVG } from "qrcode.react";  // Usando QRCodeSVG
+import WWWW_ICON from "../svg/WWW_ICON.png";
+import Text_ICON from "../svg/Text_ICON.png";
+import WIFI_ICON from "../svg/WIFI_ICON.png";
+
 import "../style/Input.css";
 
 function Input({ onTextChange }) {
+  const MAX_QR_LENGTH = 280;
+
   const [urlValue, setUrlValue] = useState("");
   const [textValue, setTextValue] = useState("");
-  // const [ssid, setSsid] = useState("");  // Estado para SSID
-  // const [password, setPassword] = useState("");  // Estado para senha
-
+  const [textLength, setTextLength] = useState(0);
+  const [activeInput, setActiveInput] = useState("text");
   const handleURLClick = () => {
     onTextChange(urlValue);
   };
@@ -19,67 +22,115 @@ function Input({ onTextChange }) {
     onTextChange(textValue);
   };
 
-  // // Formato do QR Code para Wi-Fi
-  // const wifiQR = `WIFI:T:WPA2;S:${ssid};P:${password};;`;
+  const handleTextChange = (e) => {
+    const inputValue = e.target.value;
+
+    if (inputValue.length <= MAX_QR_LENGTH) {
+      setTextValue(inputValue);
+      setTextLength(inputValue.length);
+    }
+  };
 
   return (
     <div className="inputs-box">
-      <div className="input-card">
-        <img src={image5} alt="URL icon" className="input-icon" />
-        <div className="input-text">
-          <label className="custom-label">Paste You're <span>URL</span> Here</label>
-          <input
-            className="input-url-box"
-            type="url"
-            value={urlValue}
-            onChange={(e) => setUrlValue(e.target.value)}
-          />
-          <img src={image4} className="generate-button" alt="Generate button" onClick={handleURLClick} />
-        </div>
+      <div className="button-container">
+        <img
+          src={WWWW_ICON}
+          alt="URL icon"
+          className={`input-icon ${activeInput === "url" ? "active" : ""}`}
+          onClick={() => setActiveInput("url")}
+        />
+        <img
+          src={Text_ICON}
+          alt="Text icon"
+          className={`input-icon ${activeInput === "text" ? "active" : ""}`}
+          onClick={() => setActiveInput("text")}
+        />
+        <img
+          src={WIFI_ICON}
+          alt="WiFi icon"
+          className={`input-icon ${activeInput === "wifi" ? "active" : ""}`}
+          onClick={() => setActiveInput("wifi")}
+        />
+        <img src={image1} alt="Logo"  className="Logo-icon"/>
       </div>
 
-      <div className="input-card">
-        <img src={image6} alt="message icon" className="input-icon-text" />
-        <div className="input-text">
-          <label className="custom-label">Paste You're <span>Text</span> Here</label>
-          <textarea
-            className="input-text-box"
-            value={textValue}
-            onChange={(e) => setTextValue(e.target.value)}
-          />
-          <img src={image4} className="generate-button" alt="Generate button" onClick={handleTextClick} />
+      {/* Input para URL */}
+      {activeInput === "url" && (
+        <div className="input-card">
+          <div className="input-text">
+            <label className="custom-label">
+              Paste Your <span>URL</span> Here
+            </label>
+            <input
+              className="input-url-box"
+              type="url"
+              value={urlValue}
+              onChange={(e) => setUrlValue(e.target.value)}
+            />
+            <img
+              src={image4}
+              className="generate-button"
+              alt="Generate button"
+              onClick={handleURLClick}
+            />
+          </div>
         </div>
-      </div>
+      )}
 
-      {/* Novo card para gerar QR Code de Wi-Fi
-      <div className="input-card">
-        <div className="input-text">
-          <label className="custom-label">Enter Wi-Fi SSID</label>
-          <input
-            className="input-url-box"
-            type="text"
-            value={ssid}
-            onChange={(e) => setSsid(e.target.value)}
-          />
+      {/* Input para Texto */}
+      {activeInput === "text" && (
+        <div className="input-card">
+          <div className="input-text">
+            <label className="custom-label">
+              Paste Your <span>Text</span> Here
+            </label>
+            <textarea
+              className="input-text-box"
+              value={textValue}
+              onChange={handleTextChange}
+              placeholder={`Max. ${MAX_QR_LENGTH} characters`}
+            />
+            <div className="text-counter">
+              {textLength}/{MAX_QR_LENGTH} characters
+            </div>
+            <img
+              src={image4}
+              className="generate-button"
+              alt="Generate button"
+              onClick={handleTextClick}
+            />
+          </div>
         </div>
-        <div className="input-text">
-          <label className="custom-label">Enter Wi-Fi Password</label>
-          <input
-            className="input-url-box"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+      )}
+
+      {/* Input para WiFi */}
+      {activeInput === "wifi" && (
+        <div className="input-card">
+          <div className="input-text">
+            <label className="custom-label">
+              Enter Your <span>WiFi Details</span>
+            </label>
+            <input
+              className="input-url-box"
+              type="text"
+              placeholder="WiFi SSID"
+            />
+            <input
+              className="input-url-box"
+              type="password"
+              placeholder="WiFi Password"
+            />
+            <img
+              src={image4}
+              className="generate-button"
+              alt="Generate button"
+            />
+          </div>
         </div>
-        <div className="qrcode-container">
-          <QRCodeSVG value={wifiQR} />
-        </div>
-      </div> */}
+      )}
     </div>
   );
 }
 
 export default Input;
-
-
-

@@ -1,12 +1,15 @@
 .sidebar-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
 .color-box {
   display: inline-block;
   width: 30px;
   height: 30px;
-  margin: 150px 5px 5px 5px;
+  margin: 0px 5px 5px 5px;
   cursor: pointer;
 }
 
@@ -14,7 +17,7 @@
   border: 3px solid #FFD700;
 }
 
-.Seta{
+.Seta {
   width: 220px;
   height: 220px;
 }
@@ -24,6 +27,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 img {
@@ -31,18 +36,101 @@ img {
   height: auto;
 }
 
-.Logo{
+.Logo {
   width: 220px;
   height: 220px;
-  margin: 30px;
+  margin: 10px;
 }
 
 .qr-code-container {
   border: 8px solid #000;
   padding: 12px;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .download-button {
-  margin-bottom: 40px;
-  margin-top: 20px;
+  width: 230px;
+  margin: 20px 0 40px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Breakpoints para diferentes dispositivos */
+
+@media (max-width: 1024px) {
+  .Seta, .Logo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .qr_box {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .qr-code-container {
+    padding: 10px;
+  }
+
+  .download-button {
+    width: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .Seta, .Logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .qr_box {
+    padding: 10px;
+  }
+
+  .qr-code-container {
+    padding: 8px;
+  }
+
+  .download-button {
+    width: 180px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 735px) {
+  .Seta, .Logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .Logo {
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+  }
+
+  .color-box {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+  }
+
+  .qr_box {
+    padding: 0px 10px;
+  }
+
+  .qr-code-container {
+    padding: 10px;
+    margin: 0px 45px;
+    
+  }
+
+  .download-button {
+    width: 200px;
+    padding: 0px;
+    margin: 10px;
+  }
 }

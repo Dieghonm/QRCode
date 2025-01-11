@@ -14,3 +14,26 @@
   height: 45px;
   max-width: 100%;
 }
+
+/* @media (max-width: 1024px) {
+
+}
+
+@media (max-width: 900px) {
+
+} */
+
+@media (max-width: 735px) {
+  .header {
+    height: 50px;
+  }
+  
+  .header-container {
+    margin: 8px 50px;
+  }
+  
+  .header-img {
+    height: 40px;
+    max-width: 100%;
+  }
+}

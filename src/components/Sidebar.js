@@ -3,7 +3,6 @@ import { QRCodeCanvas } from "qrcode.react";
 import "../style/Sidebar.css";
 
 import image1 from "../svg/image1.png";
-import image2 from "../svg/image2.png";
 import image3 from "../svg/image3.png";
 
 function Sidebar({ textData }) {
@@ -34,6 +33,9 @@ function Sidebar({ textData }) {
   return (
     <div className="sidebar-container">
       <div className="colors-box">
+        </div>
+      <div className="qr_box">
+        <img src={image1} alt="Logo"  className="Logo"/>
         <div className = "color-palette">
           <div
             onClick={() => setColorOption(1)}
@@ -61,11 +63,6 @@ function Sidebar({ textData }) {
             style={{ backgroundColor: "#FF0000" }}
           />
         </div>
-        <img src={image2} alt="Seta"  className="Seta" />
-        </div>
-      <div className="qr_box">
-        <img src={image1} alt="Logo"  className="Logo"/>
-
         <div ref={qrRef} className="qr-code-container">
           <QRCodeCanvas
             value={textData || "Digite algo..."}
