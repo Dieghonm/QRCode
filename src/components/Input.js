@@ -14,6 +14,10 @@ function Input({ onTextChange }) {
   const [textValue, setTextValue] = useState("");
   const [textLength, setTextLength] = useState(0);
   const [activeInput, setActiveInput] = useState("text");
+  const [ssid, setSsid] = useState("");
+  const [password, setPassword] = useState("");
+  const [encryption, setEncryption] = useState("WPA");
+
   const handleURLClick = () => {
     onTextChange(urlValue);
   };
@@ -22,9 +26,12 @@ function Input({ onTextChange }) {
     onTextChange(textValue);
   };
 
+  const handleWifiClick = () => {
+    onTextChange(`WIFI:T:${encryption};S:${ssid};P:${password};;`);
+  };
+
   const handleTextChange = (e) => {
     const inputValue = e.target.value;
-
     if (inputValue.length <= MAX_QR_LENGTH) {
       setTextValue(inputValue);
       setTextLength(inputValue.length);
@@ -118,16 +125,32 @@ function Input({ onTextChange }) {
               className="input-url-box"
               type="text"
               placeholder="WiFi SSID"
+              onChange={(e) => setSsid(e.target.value)}
             />
             <input
               className="input-url-box"
               type="password"
               placeholder="WiFi Password"
+              onChange={(e) => setPassword(e.target.value)}
             />
+            <label className="wifi_label">
+              Tipo de Criptografia:
+              <select
+              className="select_wifi"
+                value={encryption}
+                onChange={(e) => setEncryption(e.target.value)}
+                style={{ margin: "10px", padding: "5px" }}
+              >
+                <option value="WPA">WPA/WPA2</option>
+                <option value="WEP">WEP</option>
+                <option value="nopass">Sem senha</option>
+              </select>
+            </label>
             <img
               src={image4}
               className="generate-button"
               alt="Generate button"
+              onClick={handleWifiClick}
             />
           </div>
         </div>

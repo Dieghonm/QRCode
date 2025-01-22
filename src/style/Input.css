@@ -1,9 +1,7 @@
 .inputs-box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  /* margin: 0 auto; */
   padding: 30px 120px 30px 100px;
 }
 
@@ -21,9 +19,9 @@
 }
 
 .input-icon, .WIFI_ICON, .input-icon-text {
-  width: 70px;
-  height: 70px;
-  margin: 10px 0px 10px 60px;
+  width: 60px;
+  height: 60px;
+  margin: 10px 70px 10px 0px;
   cursor: pointer;
 }
 
@@ -77,6 +75,17 @@
 
 .text-counter{
   margin-left: 20px;
+}
+
+.wifi_label{
+  font-family: CascadiaCodeRoman-Bold, 'Cascadia Code';
+  font-variation-settings: 'wght' 700;
+  font-weight: 700;
+}
+
+.select_wifi{
+  border-radius: 20px;
+  border: 0;
 }
 
 @media (max-width: 1024px) {
